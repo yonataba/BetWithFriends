@@ -3,17 +3,15 @@ FROM python:3.12-slim
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
-WORKDIR /app
+WORKDIR /app/backend
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     postgresql-client \
     && rm -rf /var/lib/apt/lists/*
 
-COPY requirements.txt .
+COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY backend .
 
-RUN chmod +x wait-for-db.sh
-
-CMD gunicorn betwithfriends.wsgi:application --bind 0.0.0.0:$PORT
+CMD gunicorn config.wsgi:application --bind 0.0.0.0:$PORT
