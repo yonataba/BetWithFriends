@@ -16,4 +16,4 @@ COPY . .
 
 RUN chmod +x wait-for-db.sh
 
-CMD ./wait-for-db.sh gunicorn betwithfriends.wsgi:application --bind 0.0.0.0:$PORT
+CMD gunicorn betwithfriends.wsgi:application --bind 0.0.0.0:$PORT
