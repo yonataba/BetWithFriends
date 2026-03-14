@@ -5,7 +5,6 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /app
 
-# Install system deps (pg_isready comes from postgresql-client)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     postgresql-client \
     && rm -rf /var/lib/apt/lists/*
@@ -17,6 +16,4 @@ COPY . .
 
 RUN chmod +x wait-for-db.sh
 
-EXPOSE 8000
-
-CMD ["./wait-for-db.sh", "python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ./wait-for-db.sh gunicorn betwithfriends.wsgi:application --bind 0.0.0.0:$PORT
