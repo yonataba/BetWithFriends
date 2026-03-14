@@ -1,0 +1,43 @@
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: box-shadow 0.15s;
+  margin-bottom: 0.75rem;
+}
+.card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+.title { font-weight: 600; font-size: 1rem; }
+.badges { display: flex; gap: 0.4rem; align-items: center; flex-shrink: 0; }
+.group {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #6366f1;
+  background: #ede9fe;
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+.status {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.participants { font-size: 0.9rem; color: #475569; margin-bottom: 0.4rem; }
+.meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.82rem;
+  color: #64748b;
+}

@@ -1,0 +1,75 @@
+.back {
+  background: none;
+  border: none;
+  color: #6366f1;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 1rem;
+  display: block;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.title { margin: 0; font-size: 1.25rem; }
+.status {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 10px;
+  border-radius: 100px;
+  color: #fff;
+}
+.status[data-status="open"] { background: #22c55e; }
+.status[data-status="pending"] { background: #f59e0b; }
+.status[data-status="rejected"] { background: #ef4444; }
+.status[data-status="resolved"] { background: #6366f1; }
+.status[data-status="cancelled"] { background: #94a3b8; }
+.desc { color: #64748b; margin: 0 0 1rem; }
+.table { width: 100%; border-collapse: collapse; margin-bottom: 1.25rem; }
+.table td { padding: 6px 4px; font-size: 0.9rem; }
+.table td:first-child { color: #64748b; width: 110px; }
+.resolveForm { margin-top: 1.25rem; border-top: 1.5px solid #f1f5f9; padding-top: 1rem; }
+.resolveForm h3 { margin: 0 0 0.75rem; font-size: 1rem; }
+.label { display: flex; flex-direction: column; gap: 4px; font-weight: 500; font-size: 0.9rem; color: #475569; margin-bottom: 0.75rem; }
+.input {
+  padding: 8px 10px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  background: #fff;
+}
+.input:focus { outline: none; border-color: #6366f1; }
+.actions { display: flex; gap: 0.75rem; justify-content: flex-end; }
+.editForm { margin-top: 1.25rem; border-top: 1.5px solid #f1f5f9; padding-top: 1rem; }
+.editForm h3 { margin: 0 0 0.75rem; font-size: 1rem; }
+.row { display: flex; gap: 1rem; }
+.error {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  font-size: 0.88rem;
+}
+.pendingBanner {
+  background: #fffbeb;
+  border: 2px solid #fcd34d;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+.pendingMsg { margin: 0 0 0.75rem; font-size: 0.9rem; color: #92400e; }

@@ -1,0 +1,27 @@
+/* Shared styles for form pages */
+.row { display: flex; gap: 0.75rem; }
+.container { max-width: 520px; }
+.container h2 { margin-bottom: 1.25rem; }
+.form { display: flex; flex-direction: column; gap: 1rem; }
+.label { display: flex; flex-direction: column; gap: 4px; font-weight: 500; font-size: 0.9rem; color: #475569; }
+.input {
+  margin-top: 2px;
+  padding: 10px 12px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  width: 100%;
+  transition: border-color 0.15s;
+  background: #fff;
+}
+.input:focus { outline: none; border-color: #6366f1; }
+.actions { display: flex; gap: 0.75rem; justify-content: flex-end; margin-top: 0.5rem; }
+.error {
+  background: #fee2e2;
+  color: #991b1b;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}

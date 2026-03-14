@@ -1,0 +1,112 @@
+.welcome {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+.welcome h2 { margin: 0; font-size: 1.3rem; }
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+.statCard {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.statNum { font-size: 1.6rem; font-weight: 800; color: #6366f1; line-height: 1; }
+.statLabel { font-size: 0.75rem; color: #64748b; font-weight: 500; }
+
+.section { margin-bottom: 2rem; }
+.sectionHeader { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+.sectionTitle { font-size: 1rem; font-weight: 700; color: #334155; margin: 0 0 0.75rem; }
+.seeAll { background: none; border: none; color: #6366f1; font-size: 0.85rem; font-weight: 600; cursor: pointer; padding: 0; }
+
+.empty { color: #64748b; font-size: 0.9rem; }
+.link {
+  background: none;
+  border: none;
+  color: #6366f1;
+  font-size: inherit;
+  font-weight: 600;
+  padding: 0;
+  cursor: pointer;
+}
+
+.groupGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+.groupCard {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  transition: box-shadow 0.15s;
+}
+.groupCard:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.12); }
+.groupName { font-weight: 600; }
+.groupMeta { font-size: 0.8rem; color: #64748b; }
+
+.tabs {
+  display: flex;
+  gap: 0.4rem;
+  margin-bottom: 0.9rem;
+  flex-wrap: wrap;
+}
+.tab {
+  background: #f1f5f9;
+  border: none;
+  border-radius: 100px;
+  padding: 5px 14px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #64748b;
+  transition: background 0.15s, color 0.15s;
+}
+.tab:hover { background: #e2e8f0; }
+.tabActive { background: #6366f1 !important; color: #fff !important; }
+
+.betList { display: flex; flex-direction: column; gap: 0.75rem; }
+
+.pendingSection {
+  background: #fffbeb;
+  border: 2px solid #fcd34d;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.75rem;
+}
+.pendingSectionTitle {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #92400e;
+}
+.pendingCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #fde68a;
+  flex-wrap: wrap;
+}
+.pendingCard:last-child { border-bottom: none; }
+.pendingInfo { flex: 1; cursor: pointer; min-width: 0; }
+.pendingTitle { display: block; font-weight: 600; font-size: 0.9rem; color: #1e293b; }
+.pendingMeta { display: block; font-size: 0.78rem; color: #78716c; margin-top: 2px; }
+.pendingActions { display: flex; gap: 0.4rem; flex-shrink: 0; }

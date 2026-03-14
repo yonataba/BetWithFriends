@@ -1,0 +1,29 @@
+.title { margin: 0 0 1.5rem; }
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+.sectionTitle { margin: 0 0 1rem; font-size: 1rem; color: #475569; }
+.form { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+.input {
+  flex: 1;
+  min-width: 80px;
+  padding: 0.45rem 0.75rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.input:focus { border-color: #6366f1; }
+.error { margin-top: 0.5rem; color: #dc2626; font-size: 0.875rem; }
+.empty { color: #64748b; }
+.table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.table th { text-align: left; padding: 0.4rem 0.75rem; color: #64748b; font-size: 0.8rem; text-transform: uppercase; border-bottom: 2px solid #f1f5f9; }
+.table td { padding: 0.6rem 0.75rem; border-bottom: 1px solid #f1f5f9; vertical-align: middle; }
+.table tr:last-child td { border-bottom: none; }
+.code { font-family: monospace; font-weight: 700; color: #4338ca; letter-spacing: 0.05em; }
+.symbol { font-size: 1rem; color: #475569; }
