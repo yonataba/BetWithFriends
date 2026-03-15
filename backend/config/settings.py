@@ -99,6 +99,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AUTH_USER_MODEL = "users.User"
 SITE_ID = 2
 
+
 # ── Django REST Framework ────────────────────────────────────────────────────
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": [
@@ -111,7 +112,11 @@ REST_FRAMEWORK = {
         "django_filters.rest_framework.DjangoFilterBackend",
     ],
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DATETIME_FORMAT": "%d/%m/%Y",
 }
+
+# ── Date Input Format ────────────────────────────────────────────────────────
+DATE_INPUT_FORMATS = ["%d/%m/%Y"]
 
 SPECTACULAR_SETTINGS = {
     "TITLE": "BetWithFriends API",

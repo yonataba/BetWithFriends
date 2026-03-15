@@ -39,11 +39,24 @@ export default function CreateBetPage() {
     challenger_amount: "",
     opponent_amount: "",
     currency: "ILS",
-    due_date: "",
+    due_date: "", // dd/mm/yyyy
   });
   const [error, setError] = useState("");
 
-  const set = (key) => (e) => setForm((f) => ({ ...f, [key]: e.target.value }));
+  const set = (key) => (e) => {
+    if (key === "due_date") {
+      // Convert yyyy-mm-dd (from input type="date") to dd/mm/yyyy
+      const val = e.target.value;
+      if (val) {
+        const [yyyy, mm, dd] = val.split("-");
+        setForm((f) => ({ ...f, due_date: `${dd}/${mm}/${yyyy}` }));
+      } else {
+        setForm((f) => ({ ...f, due_date: "" }));
+      }
+    } else {
+      setForm((f) => ({ ...f, [key]: e.target.value }));
+    }
+  };
 
   const mutation = useMutation({
     mutationFn: (data) => betsApi.create(groupId, data),
@@ -177,7 +190,12 @@ export default function CreateBetPage() {
             <input
               className={styles.input}
               type="date"
-              value={form.due_date}
+              value={(() => {
+                // Convert dd/mm/yyyy to yyyy-mm-dd for input value
+                if (!form.due_date) return "";
+                const [dd, mm, yyyy] = form.due_date.split("/");
+                return `${yyyy}-${mm}-${dd}`;
+              })()}
               onChange={set("due_date")}
             />
           </label>
