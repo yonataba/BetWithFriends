@@ -1,3 +1,4 @@
+// No changes needed in this file since all API calls use the api client, which is now configured to use the environment variable.
 import api from "./client";
 
 export const authApi = {
